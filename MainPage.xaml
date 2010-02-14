@@ -1,0 +1,52 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:dataInput="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.Input" xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" x:Class="Weather.MainPage" Width="528" xmlns:my="clr-namespace:Weather" Height="348" BorderBrush="White" BorderThickness="1" Loaded="UserControl_Loaded">
+	<UserControl.Resources>
+        <Style TargetType="TextBlock" x:Key="TextBlockStyle">
+            <Setter Property="Foreground" Value="Navy"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot" Background="#FF344AD6">
+        <Image Height="128" HorizontalAlignment="Left" Margin="22,11,0,0" VerticalAlignment="Top" Width="128" Source="Images/36.png"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="257,29,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Foreground="White" Text="Weather" TextWrapping="Wrap" Height="66"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="378,80,0,0" VerticalAlignment="Top" FontSize="26.667" FontWeight="Bold" Foreground="White" Text="Lookup" TextWrapping="Wrap" Height="34"/>
+    	<TextBlock x:Name="textBlock" Margin="206,0,106,5" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" FontSize="21.333" Foreground="White" Text="Enter your zipcode:" TextWrapping="Wrap">
+    		<TextBlock.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</TextBlock.RenderTransform>
+    	</TextBlock>
+		 
+        <TextBox HorizontalAlignment="Left" Margin="423,0,0,8" x:Name="textBox1" Width="84" FontSize="24" RenderTransformOrigin="0.5,0.5" KeyUp="textBox1_KeyUp" d:LayoutOverrides="GridBox" BorderBrush="#FF394CCA" BorderThickness="0" FontFamily="Comic Sans MS" FontWeight="Bold" Foreground="#FFFFF400" Height="34" VerticalAlignment="Bottom" Text="---" TextAlignment="Center" Background="#FF394CCA">
+        	<TextBox.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</TextBox.RenderTransform>
+        </TextBox>
+        <Rectangle Height="1" HorizontalAlignment="Left" Margin="15,141,0,0" Name="Sep1" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="490" />
+        <Rectangle Height="1" HorizontalAlignment="Left" Margin="15,303,0,0" Name="Sep2" Stroke="White" StrokeThickness="1" VerticalAlignment="Top" Width="490" />
+        <my:DisplayWeather Height="152" HorizontalAlignment="Left" Margin="11,147,0,0" x:Name="displayWeather1" VerticalAlignment="Top" Width="100" />
+        <my:DisplayWeather Height="152" HorizontalAlignment="Left" Margin="113,147,0,0" x:Name="displayWeather2" VerticalAlignment="Top" Width="100" />
+        <my:DisplayWeather Height="152" HorizontalAlignment="Left" Margin="211,147,0,0" x:Name="displayWeather3" VerticalAlignment="Top" Width="100" />
+        <my:DisplayWeather Height="152" HorizontalAlignment="Left" Margin="311,147,0,0" x:Name="displayWeather4" VerticalAlignment="Top" Width="100" />
+        <my:DisplayWeather Height="152" HorizontalAlignment="Left" Margin="411,147,0,0" x:Name="displayWeather5" VerticalAlignment="Top" Width="100" Loaded="displayWeather5_Loaded" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Weather</title>
+    <style type="text/css">
+	    body
+		{
+	    	background-color: #344AD6;
+	    	padding: 25px;
+	   		margin:  auto;
+			text-align: center;
+			font-size:10px;
+			font-family:Verdana;
+    	}
+		.credits
+		{
+			width: 200px;
+	    	background-color: white;
+			margin: 25px;
+			text-align: center;
+			border:1px solid black;
+			-moz-border-radius: 7px;
+			-webkit-border-radius: 7px; 
+		}
+    </style>
+</head>
+<body>
+	<center>
+	<object data="data:application/x-silverlight-2," type="application/x-silverlight-2" height="348" width="528">
+		<param name="source" value="Weather.xap"/>
+		<param name="onError" value="onSilverlightError" />
+		<param name="background" value="white" />
+		<param name="minRuntimeVersion" value="3.0.40818.0" />
+		<param name="autoUpgrade" value="true" />
+		<a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40818.0" style="text-decoration:none">
+ 		 <img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style:none"/>
+		</a>
+	</object>
+	<div class="credits">
+		<p>
+			<a href="index.html?zip=03256">You can specify a zip code as a QueryString</a>
+		</p>
+		<a href="http://grzanka.pl"><img src="na.png" border="0"></a>
+	</div>
+	</center>
+</body>
+</html>
